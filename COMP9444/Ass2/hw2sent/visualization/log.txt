@@ -1,0 +1,200 @@
++ 003-006, 使用双向动态RNN
+    + lstm_layers = 1
+    + lstm_size = 64
+    + learning_rate = 0.005
+    + batch_size = 50
+003: 正交初始化, 双向动态LSTM, 正向outputs
+004: 正交初始化, 双向动态LSTM, 反向outputs
+005: 正交初始化, 双向动态GRU, 正向outputs
+006: 正交初始化, 双向动态GRU, 反向outputs
+
++ 003-006结果:
+    + 在20000后过拟合了
+    + 正反向outputs影响不大
+    + 好奇我这边跑的结果比杨烁的好大概10个百分点
+
++ 007-009, 比较简单的模型, 努力减少过拟合
+    + 单向GRU
+    + 这里batch_size还是需要测试下, 之前过于随机可能是初始化不好的缘故
+    + 减小lr: 0.005 --> 0.001
+007: 
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 50
+    + 优化器: Adam
+    + 非线性: sigmoid
+008: 
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 25
+    + 优化器: Adam
+    + 非线性: sigmoid
+009:
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 100
+    + 优化器: Adam
+    + 非线性: sigmoid 
+    
++ 010/011: 目前为止, 009取得了最好的效果, 现在试着再增加下batch_size到125 / 150
+010:
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 125
+    + 优化器: Adam
+    + 非线性: sigmoid 
+011:
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 150
+    + 优化器: Adam
+    + 非线性: sigmoid 
+    
++ 009/010/011对比结果: 125 ~ 150 >> 100, 可以在之后固定为125!
+    
++ 012: 尝试更换非线性, sigmoid --> tanh
+012:
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 100
+    + 优化器: Adam
+    + 非线性: tanh
+    
++ 009/012对比结果:
+
++ 013/014: 尝试更换dropout probability(之前都是0.5)
+013:
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 100
+    + 优化器: Adam
+    + 非线性: sigmoid 
+    + keep_prob: 0.3
+014:     
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 100
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.7 
+    
++ 009/013/014对比结果: 差别不大, 之后还是用0.5
+
++ 015/016/017/018/019: 优化器
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.001
+    + batch_size = 125
+    + 优化器: Adadelta/Adagrad/GradientDescent/Momentum/RMSProp
+    + 非线性: sigmoid 
+    + keep_prob: 0.5
+    
++ 机器的不同也可能造成不同的结果
+    + 003-009: 杨烁的GPU
+    + 010-014: aws
+    + 015-019: 杨烁的CPU
+    + 019: 许的CPU
+    
++ 17/10/10: 考虑引入注意力机制或者别的模型
+
+###########################################################
++ 17/10/11: 注意力机制的效果也不好, 不打算往后搞了, 整理最后的训练结果
++ 021: # similar to 005
+    + 正交初始化
+    + 双向动态GRU(取正面)
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + loss: 交叉熵
++ 022: # similar to 009
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + loss: 交叉熵
++ 023: # similar to 020
+    + 正交初始化
+    + 双向动态GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + attention_size: 64
+    + loss: 交叉熵
++ 024: # similar to 020
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + attention_size: 64
+    + loss: 交叉熵
+
++ 025/026: change attention_size
++ 025: # similar to 023
+    + 正交初始化
+    + 双向动态GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + attention_size: 32
+    + loss: 交叉熵
++ 026: # similar to 024
+    + 正交初始化
+    + 单向GRU
+    + layers = 1
+    + layer_size = 64
+    + learning_rate = 0.0001
+    + batch_size = 128
+    + 优化器: Adam
+    + 非线性: sigmoid
+    + keep_prob: 0.5
+    + attention_size: 32
+    + loss: 交叉熵
+ 
