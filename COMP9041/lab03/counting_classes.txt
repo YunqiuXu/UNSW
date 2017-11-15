@@ -1,0 +1,42 @@
+
+This file is automarked.
+
+Do not add extra lines to this file, just add your answers.
+
+For example if your answer to Q1 is: egrep Andrew classes.txt
+Change the line that says Q1 answer to:
+
+Q1 answer: egrep Andrew classes.txt
+
+
+1) Write a shell pipeline to print how many classes there are.
+
+Q1 answer: wc -l < classes.txt
+
+2) Write a shell pipeline to print how many different courses have classes?
+
+Q2 answer: cut -d$'\t' -f1 classes.txt | sort -n | uniq | wc -l
+
+
+3) Write a shell pipeline which will print the course with the most classes (and no
+other courses) and how many classes are in this course? 
+
+Q3 answer: cut -d$'\t' -f1 classes.txt | sort -n | uniq -c | sort -rk1 -n | head -1
+
+
+4) Write a shell pipeline that prints the room most frequently-used room by CSE classes how often it is used?
+
+Q4 answer: egrep '(COMP).*?(TUT|TLB|SEM)' classes.txt | cut -d$'\t' -f5 | sort -n | uniq -c | sort -rk1 -n | head -1
+
+
+5) Write a shell pipeline  that prints the most popular time-of-day for classes to
+start and how many classes start at that time?
+
+Q5 answer: cut -d$'\t' -f4 classes.txt | cut -c1-6 | sort -n | uniq -c | sort -rk1 -n | head -1
+
+
+6) Challenge: write a shell pipeline that prints a list of the course codes (only) of COMP courses that
+run 2 or more  classes of the same type starting at the same time on the same day? (e.g. three tut-labs starting Monday at 10:00)
+
+Q6 answer: egrep 'COMP' classes.txt | cut -d$'\t' -f1,4 | cut -c1-15 | uniq -d | cut -f1 | uniq
+

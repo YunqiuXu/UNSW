@@ -1,0 +1,7 @@
+{% extends "game_base.html" %}
+{% block body %}
+<form method="POST" action="guess">
+    {{ message }} - guess again:
+    <input type="textfield" name="guess">
+</form>
+{% endblock %}

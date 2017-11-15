@@ -1,0 +1,19 @@
+            User Name : mzhou              Aliases : myzh046
+                  Uid : 25068
+               Groups : cs1917
+              Expires : 31 Aug 2012
+         User classes : 3978_Student, COMP2041_Student[15jul2012]
+                      : COMP2121_Student[15jul2012], COMP2911_Student[15jul2012]
+                      : COMP1917_Tutor[16jul2012], COMP3901_Student[15jul2012]
+         Misc classes : WirelessAccess[23jun2012]
+                 Name : Michael Yang Zhou
+Password last changed : 2011/03/02.21:23:19
+       Home Directory : /import/adams/1/mzhou
+     Waste Basket UID : 65619
+ Printer Usage Status : Pre-census Allocation       2045 (More will be available after HECS census)
+                      : Used                          35
+                      : Available                   2010
+                      : set at 12:05 AM 19/Mar/2012
+       Daily IP Quota : 350.0MB
+     Session IP Quota : 700.0MB (more will be available from 31 March, 2012)
+     Session IP Usage : 275.3MB

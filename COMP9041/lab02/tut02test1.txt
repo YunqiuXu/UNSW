@@ -1,0 +1,96 @@
+#define
+
+#include
+
+#undef
+
+#ifdef
+
+#ifndef
+ whitespace 
+#if
+1 2  
+<p>|<br> <p>|<br> <p>|<br> Harry
+
+<p>|<br>
+     wqdwqdwq         <p>|<br>
+<p>
+
+                sdfdsf <br>
+                <p>|<br>|<p>
+4 hello hello yunqiu
+
+Barry, 
+Harry, Larry and 
+PparryseParParry
+Farryrryrry
+Garry
+\n
+world hello \n 
+  hello world \n
+
+hello hello
+world world
+world world hello
+calendar \n
+celendar
+calandar
+calender
+celandar
+celender
+calander
+celander
+1,-2,3
+2,3,4
+0,1,2
+4,5,9
+-1,2,3,4
+\n
+I love programming in Perl and (Java|C)
+I (love|hate) programming in (Perl|Python) and Java
+I love programming in (Perl|Python) and (Java|C)
+I love programming in Python and (Java|C)
+I hate programming in Perl and C
+
+4444.35
+42.5
+34.43223
+0.55555555555555555555555555555555555
+.324234
+-0.5
+
+ips:
+129094017200
+129.94....172.1
+129.94.172.0
+129.94.172.25
+129.94.172.26
+129.94.172.10
+129.94.172.18
+129.94.172.34
+129.94.172.9
+129.94.172.1
+
+root:ZHolHAHZw8As2:0:0:root:/root:/bin/bash
+jas:nJz3ru5a/44Ko:100:100:John Shepherd:/home/jas:/bin/bash
+ZHolHAHZw8As2:0:0:root:/root:/bin/bash
+:ss:nJz3ru5a/44Ko:100:100:John Shepherd:/home/jas:/bin/bash
+dsfsfsdfsd:xx dsfxx:
+
+3.141 value of Pi
+90.57 maximum hits/sec
+half of the time, life is silly
+0.05% is the legal limit
+42 - the meaning of life
+this 1.333 is not at the start
+
+2134389|Wang, Duved Seo Ken         |fri15-spoons|
+2139656|Undirwaad, Giaffriy Jumis   |tue13-kazoo|
+2154877|Ng, Hinry                   |tue17-kazoo|
+2174328|Zhung, Yung                 |thu17-spoons|
+2234136|Hso, Men-Tsun               |tue09-harp|
+2254148|Khorme, Saneu               |tue09-harp|
+2329667|Mahsin, Zumel               |tue17-kazoo|
+2334348|Trun, Toyin Hong Recky      |mon11-leaf|
+2336212|Sopuvunechyunant, Sopuchue  |mon11-leaf|
+2344749|Chung, Wue Sun              |fri09-harp|

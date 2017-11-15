@@ -1,0 +1,12 @@
+#!/usr/bin/perl -w
+$content = $ARGV[0];
+
+# if ( $content =~ m/'''/){
+#     print "Case 1 \n";
+#     print "print(r\"$content\")\n";
+# }
+# else{
+#     print "Case 2 \n";
+#     print "print(r'''$content''')\n";
+# }
+print "print(r'''$content''')\n";

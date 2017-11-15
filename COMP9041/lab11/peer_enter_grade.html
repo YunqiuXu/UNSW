@@ -1,0 +1,25 @@
+{% extends "peer_base.html" %}
+{% block body %}
+
+<form method="POST" action="save_grade">
+Select a grade for the work of {{number}} {{name}}
+    <select name="grade">
+        <option></option>
+ 
+        {% for grade in grade_descriptions %}
+            <option value="{{grade}}" {% if grade == existing_grade %}selected{% endif %}>
+            	{{grade}} {{grade_descriptions[grade]}}
+            </option>
+        {% endfor %}
+
+    </select>
+    <button type="submit" class="btn btn-default">Save Grade</button>
+</div>
+</form>
+
+{% if existing_grade %}
+<p>
+You have previously entered an assessment of <b>{{existing_grade}}</b> for this student's work.
+{% endif %}
+
+{% endblock %}

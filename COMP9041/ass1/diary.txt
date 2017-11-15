@@ -1,0 +1,38 @@
+Date        Start   End     Activity     Comments
+18/09/17    15:00   19:00   Coding       Build the framework
+19/09/17    09:00   11:00   Coding       Subset0 passed, basic interpreters, print
+19/09/17    13:00   14:00   Coding       Subset1, basic operator(+,-,*,/,%,**)
+19/09/17    14:00   16:00   Coding       Subset1, assignment operator(+=, -=, *=, /=, %=, **=)
+19/09/17    18:00   20:00   Coding       Subset1, basic floor division(//, //=)
+22/09/17    14:00   15:00   Coding       Subset2, bitwise operators and comparasion operators
+22/09/17    15:00   16:00   Debugging    Subset2 passed
+22/09/17    16:00   18:00   Debugging    Pass some more complex cases for subset2
+22/09/17    19:00   20:30   Debugging    Fix the proiority for bitwise and comparasion operators
+23/09/17    12:00   14:00   Coding       Subset3, multi-line statement, handle indents
+23/09/17    14:00   16:00   Coding       Subset3, for loop
+23/09/17    16:00   17:00   Debugging    Fix bug for elsif, subset3 passed
+26/09/17    12:00   14:00   Coding       Subset4, list difinition
+26/09/17    14:00   15:30   Debugging    Fix string assignment
+26/09/17    16:00   18:00   Debugging    Fix function "change_iterable()"
+27/09/17    10:00   12:00   Coding       List indexing
+27/09/17    13:00   14:30   Coding       List operations
+27/09/17    15:00   18:00   Coding       More print methods
+27/09/17    18:00   18:30   Debugging    Subset4 passed
+27/09/17    18:00   20:00   Coding       List slicing
+29/09/17    10:00   13:00   Debugging    Retest all cases, build test files
+29/09/17    14:00   18:00   Debugging    Fix bug for list detecting
+01/10/17    09:00   12:00   Coding       Subset5, basic dict, join, sys.argv
+01/10/17    13:00   17:00   Coding       Subset5, raw strings, re.sub, fileinput.input()
+01/10/17    19:00   21:00   Debugging    Fix sys.argv
+02/10/17    10:00   15:00   Debugging    Build demo files
+02/10/17    15:00   16:00   Debugging    Fix bugs to handle single quot
+02/10/17    19:00   22:00   Debugging    Retest all cases
+03/10/17    10:00   14:00   Coding       Rebuild the code into readable format
+
+
+
+
+
+
+
+

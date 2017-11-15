@@ -1,0 +1,23 @@
+#!/bin/bash
+
+a=1
+b=adedfd
+c=""""""
+
+while     (( a  +      b > 13.5 / c))
+do
+    #
+done
+
+while ( a >= b )
+do
+
+    # 
+done
+
+echo Sum of the integers $start .. $finish = $sum
+
+while (a)
+do
+    a=$(( a + 1))
+done

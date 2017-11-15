@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+
+# replace [01234] as <, replace [6789] as >
+while($line = <STDIN>){
+	$line =~ s/[01234]/\</g;
+	$line =~ s/[6789]/\>/g;
+	print "$line";
+}
+

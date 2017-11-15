@@ -1,0 +1,7 @@
+{% extends "game_base.html" %}
+{% block body %}
+<form method="POST" action="guess">
+    Enter a guess between 1 and {{max_number_to_guess}} (inclusive):
+    <input type="textfield" name="guess">
+</form>
+{% endblock %}

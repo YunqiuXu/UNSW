@@ -1,0 +1,10 @@
+{% extends "game_base.html" %}
+{% block body %}
+You guessed it. 
+<p> 
+The number I was thinking of was <b>{{ message }}</b>. 
+</p><p> 
+</p><form method="POST" action="start"> 
+  <input value="Play again?" type="submit"> 
+</form>
+{% endblock %}

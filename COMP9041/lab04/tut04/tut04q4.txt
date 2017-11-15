@@ -1,0 +1,11 @@
+        alias: COMP2041-list
+  description: Udb alias list
+    addresses:
+               blix573
+               mhuz728
+               sngx602
+               andrewt
+       owners: udb, cs2041
+authorised posters: @Employee, @Subject_Utility, @Wheel
+    Moderator: udb
+       Status: system, closed, moderated, virtual, and public

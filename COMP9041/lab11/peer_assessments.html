@@ -1,0 +1,13 @@
+{% extends "peer_base.html" %}
+{% block body %}
+
+These assessments have been entered for you: 
+<ul>
+{% for assessor in assessments %}
+	<li> <b>{{assessments[assessor]}}</b> from {{assessor}}
+{% endfor %}
+</ul>
+
+Your overall grade is the median of the above: <b>{{median}}</b>
+
+{% endblock %}

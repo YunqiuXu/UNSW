@@ -1,0 +1,30 @@
+{% extends "peer_base.html" %}
+
+{% block body %}
+{{message}}
+<p>
+<hr>
+<p>
+<form method="POST" action="enter_grade">
+
+    Select a COMP[29]041 student
+    
+    <select name="student_assessed">
+         <option></option>
+       {% for zid in students %}
+            <option value="{{zid}}">{{zid}} {{students[zid]['name']}}</option>
+        {% endfor %}
+    </select>
+    to
+    <input type="submit" value="Assess" >
+</form>
+<p>
+<hr>
+<p>
+<form method="POST" action="assessments">
+	Or 
+	<input type="submit" value="See Other Students Assessment of Your Work" >
+</form>
+<p>
+
+{% endblock %}
